@@ -1,17 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BINGO - COFAMI</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Carlos Andres Rojas Parra" />
+    <title>BINGO COFAMI - BETA v0.5</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./styles/bootstrap.css" rel="stylesheet" />
+    <link href="./styles/styles.css" rel="stylesheet" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="./images/logo-bingo.png" />
+    <meta name="theme-color" content="#7952b3" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>Bingo COFAMI</h1>
-    <button onclick="generateBoard()">Generar Cartón</button>
-    <div id="board"></div>
+    <header>
+      <!-- <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">Acerca de</h4>
+              <p class="text-muted">
+                Version BETA del BINGO online para la cooperativa familiar
+                COFAMI <br /><br />
+                Desarrollado por: Nova Halley System Company
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <img src="./images/logo-bingo.png" alt="" width="70" height="44" />
+            <strong>BINGO COFAMI</strong>
+          </a>
+          <!-- <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+        </div>
+      </div>
+    </header>
 
+    <main>
+      <section class="py-2 text-center container">
+        <div class="row py-lg-1">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">BINGO COFAMI</h1>
+            <!-- <p class="lead text-muted">
+              Something short and leading about the collection below—its
+              contents, the creator, etc. Make it short and sweet, but not too
+              short so folks don’t simply skip over it entirely.
+            </p> -->
+            <p>
+              <button class="btn btn-success my-2" onclick="generateBoard()">
+                Generar Tabla
+              </button>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="py-1">
+        <div class="container">
+          <div class="row">
+            <div class="card shadow-sm">
+              <div id="board" style="width: auto; margin: auto auto"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">Volver arriba</a>
+        </p>
+        <p class="mb-1">COFAMI - Cooperativa Familiar</p>
+      </div>
+    </footer> -->
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/bootstrap.js"></script>
   </body>
 </html>

@@ -1,12 +1,16 @@
 #board {
   display: grid;
-  grid-template-columns: repeat(5, 50px);
-  grid-template-rows: repeat(5, 50px);
+  grid-template-columns: repeat(5, 55px);
+  grid-template-rows: repeat(5, 55px);
   gap: 2px;
 }
 
 .cell {
   border: 1px solid black;
   text-align: center;
-  line-height: 50px;
+  line-height: 55px;
+}
+
+.cell:hover {
+  background-color: rgba(97, 97, 97, 0.151);
 }

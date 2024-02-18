@@ -6,7 +6,8 @@ function generateBoard() {
   const bc = document.createElement("div");
   bc.classList.add("cell");
   bc.textContent = "B";
-  bc.style.backgroundColor = "#ccc";
+  bc.classList.add("bg-primary");
+  bc.classList.add("text-light");
   board.appendChild(bc);
 
   // Generar I
@@ -14,7 +15,8 @@ function generateBoard() {
   const ic = document.createElement("div");
   ic.classList.add("cell");
   ic.textContent = "I";
-  ic.style.backgroundColor = "#ccc";
+  ic.classList.add("bg-primary");
+  ic.classList.add("text-light");
   board.appendChild(ic);
 
   // Generar N
@@ -22,15 +24,17 @@ function generateBoard() {
   const nc = document.createElement("div");
   nc.classList.add("cell");
   nc.textContent = "N";
-  nc.style.backgroundColor = "#ccc";
+  nc.classList.add("bg-primary");
+  nc.classList.add("text-light");
   board.appendChild(nc);
 
   // Generar G
   let G = generateUniqueNumbers(46, 60, 5);
   const gc = document.createElement("div");
   gc.classList.add("cell");
+  gc.classList.add("bg-primary");
+  gc.classList.add("text-light");
   gc.textContent = "G";
-  gc.style.backgroundColor = "#ccc";
   board.appendChild(gc);
 
   // Generar O
@@ -38,14 +42,19 @@ function generateBoard() {
   const oc = document.createElement("div");
   oc.classList.add("cell");
   oc.textContent = "O";
-  oc.style.backgroundColor = "#ccc";
+  oc.classList.add("bg-primary");
+  oc.classList.add("text-light");
   board.appendChild(oc);
 
   for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 5; j++) {
       const cell = document.createElement("div");
       cell.addEventListener("click", function () {
-        this.style.backgroundColor = "#ccc";
+        if (cell.classList.contains("bg-warning")) {
+          this.classList.remove("bg-warning");
+        } else {
+          this.classList.add("bg-warning");
+        }
       });
       cell.classList.add("cell");
       if (i === 2 && j === 2) {
